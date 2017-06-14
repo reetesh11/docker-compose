@@ -13,7 +13,6 @@ node {
 
         /*app = docker.build("flask", ".")*/
 	/*app = docker.compose("up")*/
-	sh 'sudo su'
 	sh 'curl -L https://github.com/docker/compose/releases/download/1.13.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose'
 	sh 'docker-compose up'
     }

@@ -11,8 +11,9 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("flask", ".")
+        /*app = docker.build("flask", ".")*/
 	/*app = docker.compose("up")*/
+	sh 'docker-compose up'
     }
 
     stage('Test image') {
